@@ -9,17 +9,21 @@ body {
     margin: 0;
     background: black;
     overflow: hidden;
+    font-family: Arial;
+    color: white;
+}
+
+/* CENTRAR */
+.contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: Arial;
 }
 
 /* TEXTO */
 h1 {
-    color: white;
     font-size: 80px;
     margin: 20px;
     animation: latidoTexto 1s infinite;
@@ -87,7 +91,7 @@ h1 {
 
 /* IMAGEN */
 img {
-    width: 150px;
+    width: 180px;
     border-radius: 20px;
     margin-top: 20px;
 }
@@ -96,20 +100,30 @@ img {
 
 <body>
 
-<h1>TE AMO MI AMOR ❤️</h1>
-<div class="corazon"></div>
-
-<!-- IMAGEN -->
-<img src="file:///C:/Users/Luz%20Andrea/Downloads/image/WhatsApp%20Image%202026-03-25%20at%202.17.54%20PM%20(1).jpeg">
-
 <script>
-// CONFETI SUAVE
-for (let i = 0; i < 30; i++) {
-    let c = document.createElement("div");
-    c.className = "confeti";
-    c.style.left = Math.random() * 100 + "vw";
-    c.style.animationDuration = (3 + Math.random() * 3) + "s";
-    document.body.appendChild(c);
+// 🔐 CONTRASEÑA
+let clave = prompt("💖 Ingresa la contraseña:");
+
+if (clave !== "280223") {
+    document.body.innerHTML = "<h2 style='color:white; text-align:center; margin-top:40vh;'>Acceso denegado 😢</h2>";
+} else {
+
+    document.body.innerHTML = `
+    <div class="contenido">
+        <h1>TE AMO MI AMOR❤️</h1>
+        <div class="corazon"></div>
+        <img src="foto.jpg">
+    </div>
+    `;
+
+    // 🎉 CONFETI
+    for (let i = 0; i < 30; i++) {
+        let c = document.createElement("div");
+        c.className = "confeti";
+        c.style.left = Math.random() * 100 + "vw";
+        c.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(c);
+    }
 }
 </script>
 
