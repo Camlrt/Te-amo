@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Para ti ❤️</title>
 
+<style>
+body {
+    background: black;
+    color: red;
+    text-align: center;
+    font-family: Arial;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 60px;
+    margin-top: 20%;
+    animation: latido 1s infinite;
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+</style>
+</head>
+
+<body>
+
+<script>
+let clave = prompt("💖 Ingresa la contraseña:");
+
+if (clave !== "280223") {
+    document.body.innerHTML = "<h2 style='color:white;'>Acceso denegado 😢</h2>";
+} else {
+    document.body.innerHTML = `
+    <h1>TE AMO ❤️</h1>
+
+<pre style="font-size:20px;">
+  ❤️     ❤️
+❤️❤️❤️ ❤️❤️❤️
+❤️❤️❤️❤️❤️❤️❤️
+ ❤️❤️❤️❤️❤️❤️
+  ❤️❤️❤️❤️❤️
+   ❤️❤️❤️❤️
+    ❤️❤️❤️
+     ❤️❤️
+      ❤️
+</pre>
+    `;
+}
+</script>
+
+</body>
+</html>
